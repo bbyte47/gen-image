@@ -1,35 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is an app using [Next.js](https://nextjs.org) with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and [OpenAI API](https://platform.openai.com/overview) with [SASS](https://www.npmjs.com/package/sass). This app comes from a Udemy course [Build a DALL-E Image Generator - React - Javascript - OpenAI](https://www.udemy.com/course/build-a-dall-e-image-generator-react-javascript-openai/).
+
+This app has modified the code to use version 4 of the OpenAI API instead of the version 3 that the course was designed with. And this app has only been tested locally on a Windows 11 box.
+
+There was a breaking change moving to version 4 and it also became clear that using an API key on the client is not recommended. Rather the best practice is using the key on a backend server such as Node.js, Django, or Laravel.
+
+Neverthless, the course offered a lot of interesting concepts and learning experiences. Plus the instructor added a lot of personality to the course.
 
 ## Getting Started
 
-First, run the development server:
+After cloning or downloading this project:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+## Adding OpenAI API key
+
+If you don't have the key go to [OpenAI API](https://platform.openai.com/overview) and create a key. This is a website that walks you through getting a key [Guiding Tech](https://www.guidingtech.com/how-to-generate-openai-api-key/#:~:text=Yes.%20OpenAI%20API%20keys%20are%20free%20to%20use.,credits%20on%20your%20account%20to%20use%20OpenAI%E2%80%99s%20services).
+
+Create a .env file in the root folder of the project and in the folder add this line:
+
+```bash
+NEXT_PUBLIC_OPENAI_API_KEY="YOUR_OPENAI_KEY"
+```
+
+The app should now be ready to run locally:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Or whatever package manager you are using.
 
 ## Deploy on Vercel
 
