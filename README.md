@@ -12,10 +12,6 @@ After cloning or downloading this project:
 
 ```bash
 npm install
-# or
-yarn install
-# or
-pnpm install
 ```
 
 ## Adding OpenAI API key
@@ -33,8 +29,6 @@ The app should now be ready to run locally:
 ```bash
 npm run dev
 ```
-
-Or whatever package manager you are using.
 
 ## Deploy on Vercel
 
